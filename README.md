@@ -27,7 +27,7 @@ of how this game works.
 ![lightsoff.gif](Doc%2Flightsoff.gif)
 
 ### Known bugs:
-- The text that tells you how to regenerate and the winning text is behind the boxes in the top left corner.
+- The text that appears when you win is small and behind the boxes in the top left corner
 
 ### Credits:
 - Threepp: https://github.com/markaren/threepp/
