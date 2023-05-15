@@ -44,32 +44,32 @@ void BoxScene::createBoxes() {
             auto _mesh = Mesh::create(m_geometry, mat); // x
             _mesh->position.set(    0.1f + _mesh->scale.x*0.5f + static_cast<float>(j)*(_mesh->scale.x+0.1f), // y
                                     0.1f + _mesh->scale.x*0.5f + static_cast<float>(i)*(_mesh->scale.y+0.1f), // z
-                                    0.0f); // set the position of the box
+                                    0.0f);
             box.mesh = _mesh;
             m_boxes[i][j] = box; // assign the box
-            m_scene->add(m_boxes[i][j].mesh); // add the box to the scene
+            m_scene->add(m_boxes[i][j].mesh);
         }
     }
 }
 
 void BoxScene::generateValidPattern() {
-    int random = math::randomInRange(0, 6);
+    int random = math::randomInRange(0, 6); // sets one of the 7 patterns declared to be valid
 
     std::vector<bool> pattern = m_valids[random];
 
-    for (int i = 0; i < SIZE; i++) {
-        if (pattern[i]) {
-            m_boxes[4][i].setColor(Color::yellow);
+    for (int j = 0; j < SIZE; j++) {
+        if (pattern[j]) {
+            m_boxes[4][j].setColor(Color::yellow);
         }
     }
 
-    for (int i = 0; i < 500; i++) {
-        int j = math::randomInRange(0, 24);
+    for (int j = 0; j < 500; j++) {
+        int i = math::randomInRange(0, 24);
 
-        int x = j % SIZE; // SIZE is 5
-        int y = (j - x) / SIZE; // SIZE is 5
+        int x = i % SIZE; // gives x-coordinate of the yellow boxes
+        int y = (i - x) / SIZE; // gives y-coordinate of the yellow boxes
 
-        toggle({x, y});
+        toggle({x, y}); // toggles the yellow box
     }
 }
 
@@ -91,10 +91,9 @@ void BoxScene::animate() {
             if (checkWin()) {
                 m_renderer.enableTextRendering();
                 m_renderer.textHandle("Congratulation!! press (r) to start a new game");
+                std::cout<< "Congratulations!! press (r) to start a new game"<< std::endl;
             }
         }
-        m_renderer.enableTextRendering();
-        m_renderer.textHandle("press (r) to restart");
         m_renderer.render(m_scene, m_camera);
     });
 }
@@ -139,7 +138,6 @@ void BoxScene::toggle(Vector2 indexes) {
     int i = static_cast<int>(indexes.x);
     int j = static_cast<int>(indexes.y);
 
-    //std::cout << i << " <- i | j -> " << j << std::endl;
 
     if (i >= 0 && i < SIZE && j >= 0 && j < SIZE) {
         m_boxes[i][j].toggle();

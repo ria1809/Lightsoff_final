@@ -2,9 +2,21 @@
 
 #include <catch2/catch.hpp>
 
-TEST_CASE("Testing Box") {
+#include "gridScene.hpp"
 
-bool a = true;
 
-CHECK(a == true);
+TEST_CASE("Test BoxScene getBoxAtPosition function") {
+    BoxScene boxScene;
+    Vector2 pos(-1, -1);
+
+    REQUIRE(boxScene.getBoxAtPosition(pos) == Vector2{-1, -1});
+
 }
+
+
+
+
+
+
+
+

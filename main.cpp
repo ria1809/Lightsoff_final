@@ -1,4 +1,4 @@
-#include "Include/gridScene.hpp"
+#include "include/gridScene.hpp"
 
 using namespace threepp;
 
