@@ -1,8 +1,8 @@
 
 
 #include <iostream>
-#include "gridScene.hpp"
 #include "threepp/renderers/TextHandle.hpp"
+#include "gridScene.hpp"
 
 using namespace threepp;
 
