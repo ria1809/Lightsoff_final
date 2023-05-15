@@ -17,10 +17,7 @@ BoxScene::BoxScene() :
         m_whiteMaterial(MeshBasicMaterial::create()),
         m_boxes(SIZE, std::vector<Box>(SIZE)),
         m_mouseListener(m_canvas),
-        m_rd(),
-        m_gen(m_rd()),
-        m_dis(0, 1)
-
+        m_rd()
 {
     m_canvas.addMouseListener(&m_mouseListener);
     m_renderer.setClearColor(Color::black);
@@ -91,6 +88,7 @@ void BoxScene::animate() {
             if (checkWin()) {
                 m_renderer.enableTextRendering();
                 m_renderer.textHandle("Congratulation!! press (r) to start a new game");
+                std::cout << "Congratulation!! press (r) to start a new game" << std::endl;
             }
         }
         m_renderer.enableTextRendering();
@@ -104,7 +102,7 @@ void BoxScene::run() {
     animate();
 }
 
-Vector2 BoxScene::getBoxAtPosition(Vector2 pos) {
+Vector2 BoxScene::getBoxAtPosition(Vector2 pos){
 
     Vector2 boxSizePixels = {100, 83};
     Vector2 spacingSizePixels = {10, 8};
