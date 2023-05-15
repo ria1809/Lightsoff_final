@@ -32,3 +32,6 @@ of how this game works.
 ### Credits:
 - Threepp: https://github.com/markaren/threepp/
 - This project is based on the game Lights Out, invented by Tiger Electronics in 1995.
+
+#### Candidates:
+10008 and 10038
