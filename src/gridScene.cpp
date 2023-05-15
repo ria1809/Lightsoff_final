@@ -1,6 +1,9 @@
+
+
+#include <iostream>
 #include "gridScene.hpp"
 #include "threepp/renderers/TextHandle.hpp"
-#include <iostream>
+
 using namespace threepp;
 
 BoxScene::BoxScene() :

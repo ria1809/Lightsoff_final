@@ -10,6 +10,7 @@ add_subdirectory(src)
 
 add_executable(lightsoff main.cpp)
 target_link_libraries(lightsoff PUBLIC gamelib imgui::imgui)
+
 include(FetchContent)
 FetchContent_Declare(
         Catch2

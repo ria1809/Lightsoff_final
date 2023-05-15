@@ -1,6 +1,5 @@
 set(sources
-        "gridScene.cpp"
-        )
+        "gridScene.cpp")
 
 add_library(gamelib ${sources})
 target_link_libraries(gamelib PUBLIC threepp::threepp)
