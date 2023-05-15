@@ -1,7 +1,6 @@
 
 #include "threepp/threepp.hpp"
 #include "Box.hpp"
-#include "gridScene.hpp"
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch.hpp>
 
