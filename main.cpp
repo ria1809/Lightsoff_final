@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "include/gridScene.hpp"
+=======
+#include "gridScene.hpp"
+>>>>>>> origin/main
 
 using namespace threepp;
 

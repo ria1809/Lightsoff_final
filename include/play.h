@@ -1,6 +1,4 @@
-//
-// Created by Ria Sharma on 12/05/23.
-//
+
 #ifndef LIGHTSOFF_PLAY_H
 #define LIGHTSOFF_PLAY_H
 #include "threepp/threepp.hpp"
