@@ -1,5 +1,4 @@
 
-
 #ifndef LIGHTSOFF_BOX_HPP
 #define LIGHTSOFF_BOX_HPP
 #include "threepp/threepp.hpp"

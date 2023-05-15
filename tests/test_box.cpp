@@ -1,8 +1,7 @@
+#include "gridScene.hpp"
 #define CATCH_CONFIG_MAIN
-
 #include <catch2/catch.hpp>
 
-#include "gridScene.hpp"
 
 
 TEST_CASE("Test BoxScene getBoxAtPosition function") {

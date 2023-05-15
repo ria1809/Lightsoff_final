@@ -88,11 +88,8 @@ void BoxScene::animate() {
             if (checkWin()) {
                 m_renderer.enableTextRendering();
                 m_renderer.textHandle("Congratulation!! press (r) to start a new game");
-<<<<<<< HEAD
-                std::cout<< "Congratulations!! press (r) to start a new game"<< std::endl;
-=======
                 std::cout << "Congratulation!! press (r) to start a new game" << std::endl;
->>>>>>> origin/main
+
             }
         }
         m_renderer.render(m_scene, m_camera);

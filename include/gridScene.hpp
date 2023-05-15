@@ -17,6 +17,7 @@ public:
     void run();
     bool checkWin();
     void generateValidPattern();
+
     Vector2 getBoxAtPosition(Vector2 pos);
 
 
